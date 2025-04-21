@@ -32,7 +32,7 @@
       output.appendChild(row);
     });
 
-    const totalRow = document.createElement('tr');
-    totalRow.innerHTML = `<td><strong>Total</strong></td><td><strong>${totalTime}</strong></td>`;
+   const maxTime = Math.max(...results.map(r => r.time)).toFixed(3);
+    totalRow.innerHTML = `<td><strong>Total</strong></td><td><strong>${maxTime}</strong></td>`;
     output.appendChild(totalRow);
   });
